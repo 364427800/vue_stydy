@@ -2,8 +2,8 @@ new Vue({
   el: "#app",
   data: {
     age: 30,
-    x=0,
-    y=0
+    x:0,
+    y:0
   },
   methods: {
     add: function (inc) {
@@ -15,6 +15,12 @@ new Vue({
     updatexy: function (event) {
       this.x = event.offsetX;
       this.y = event.offsetY;
+    },
+    stopmove: function (event) {
+      event.stopPropagation();
+    },
+    ale:function(){
+      alert("阻止默认事件");
     }
   }
 });

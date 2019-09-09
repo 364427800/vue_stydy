@@ -16,6 +16,7 @@
         <p>My age is {{age}}</p>
         <p>
             <button v-on:click="add(1)">增加1</button>
+            <button v-on:click.once="add(1)">增加1-修饰符【once】只生效一次</button>
             <button v-on:click="subtract(1)">减少1</button>
         </p>
         <p>
@@ -24,7 +25,12 @@
         </p>
         <div class="canvas" v-on:mousemove="updatexy">
             {{x}}, {{y}}
+            <span @mousemove="stopmove">Stop Moving</span>
+            <p>
+                <span @mousemove.stop>Stop Moving-修饰符【stop】</span>
+            </p>
         </div>
+        <a @click.prevent="ale" href="http://www.baidu.com">跳转百度</a>
     </div>
     <script src="app.js"></script>
 </body>

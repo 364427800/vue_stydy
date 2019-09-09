@@ -11,18 +11,17 @@
 </head>
 
 <body>
-    <dic id="app">
+    <div id="app">
         <h2>
             {{ saygood() }}
         </h2>
-        <h3>Name: {{msg}}</h1>
+        <h3>Name: {{msg}}</h3>
             <p>Job: {{job}}</p>
             <a v-bind:href="link">website</a>
             <p v-html="addr"></p>
             <p v-if="seen">v-if测试</p>
-            <button v-on:click="haha">显示开关</button>
-            </div>
-    </dic>
+            <button @click="haha">显示开关</button>
+    </div>
     <script src="app.js"></script>
 </body>
 
